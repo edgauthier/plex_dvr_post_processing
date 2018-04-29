@@ -76,8 +76,8 @@ if [ ! -z "$1" ]; then
     echo "********************************************************" 
 else
     echo "********************************************************" 
-    echo "PlexPostProc"
-    echo "Usage: $0 FileName" 
+    echo "Plex DVR Post Processing"
+    echo "Usage: $0 <FILENAME>" 
     echo "********************************************************" 
 fi
 
