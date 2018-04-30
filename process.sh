@@ -56,8 +56,8 @@ if [ ! -z "$1" ]; then
     echo "Starting Transcoding: Converting to H.264 w/ffmpeg @720p" 
     echo "********************************************************" 
 
-    ffmpeg -i "$FILENAME" -itsoffset 0.5 -i out.srt \
-        -s hd720 -c:v libx264 -preset veryfast -vf yadif -b:v 4M -level 4.0 \
+    ffmpeg -i "$FILENAME" -itsoffset 0.5 -i "$SRTFILENAME" \
+        -s hd720 -c:v libx264 -preset veryfast -vf yadif -b:v 3M -level 4.0 \
         -c:a copy \
         -c:s srt -metadata:s:s:0 language=ENG \
         "$TEMPFILENAME"
